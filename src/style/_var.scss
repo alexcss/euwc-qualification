@@ -1,0 +1,35 @@
+$contrast: #27ABFF;
+$primary: #f36523;
+$primary-dark: #dd5313;
+$danger: #E51C23;
+$warning: #FF9800;
+$success: #259B24;
+$ff: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/* Breakpoints */
+
+$breakpoint-small: 480px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 960px;
+$breakpoint-xlarge: 1220px;
+$breakpoint-xxlarge: 1600px;
+
+$breakpoint-small-max: ($breakpoint-medium - 1);
+$breakpoint-mini-max: ($breakpoint-small - 1);
+$breakpoint-medium-max: ($breakpoint-large - 1);
+$breakpoint-large-max: ($breakpoint-xlarge - 1);
+$breakpoint-xlarge-max: ($breakpoint-xxlarge - 1);
+
+$container-max-width: 1200px;
+$container-padding-horizontal: 30px;
+
+$container-small-padding-horizontal: 10px;
+
+$container-large-max-width: $container-max-width;
+$container-large-padding-horizontal: 30px;
+
+$align-horizontal: 15px;
+$align-vertical: 15px;
+
+$margin: 15px;
+$margin-small: 5px;
+$margin-large: 50px;

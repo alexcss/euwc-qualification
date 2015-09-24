@@ -1,0 +1,139 @@
+@import "_var.scss";
+
+/* Typo */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .2s ease-in, border-color .2s ease-in, background-color .2s ease-in, opacity .2s ease-in;
+}
+a{
+	color: $contrast;
+	text-decoration: none;
+	&:hover{
+		color: $primary;
+	}
+}
+svg{
+	display: inline-block;
+}
+path{
+	transition: fill .3s ease-in;
+}
+h1,h2,h3,h4,h5,h6{
+	color: #000;
+	font:300 16px/1.2 $ff;
+	a{
+		color: inherit;
+	}
+	margin: 0 0 15px;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+p{
+	margin-bottom: 15px;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="email"],
+select,
+textarea{
+	font:normal 14px/1.2 $ff;
+	background: #EAE8E2;
+	padding: 10px 25px;
+	color: #263238;
+	border: 1px solid #263238;
+	outline: none !important;
+	border-radius: 3px;
+
+	&:focus{
+		border-color: $primary;
+	}
+}
+
+button,
+.ba-button,
+input[type="button"],
+input[type="submit"]{
+	display: inline-block;
+	margin: 0;
+	cursor: pointer;
+	border: none;
+	font:400 14px/33px $ff;
+	text-decoration: none !important;
+	text-transform: uppercase;
+	outline: none !important;
+	position: relative;
+	padding: 0 31px;
+	min-height: 33px;
+	color: #fff;
+	text-transform: uppercase;
+	background: $primary;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	vertical-align: middle;
+	&:hover{
+		background: $primary-dark;
+		color: #fff !important;
+	}
+	&:active{
+		top: 1px;
+	}
+}
+.ba-button{
+	&--light {
+		min-height: 42px;
+		line-height: 42px;
+		background-color: #FFF;
+		border-radius: 3px;
+		box-shadow: 0 0 4.8px 0.3px rgba(0, 0, 0, 0.2);
+		color: #000;
+		text-transform: none;
+		&:hover{
+			background: $primary;
+		}
+	}
+	&--large {
+		font-size: 17px;
+		font-weight: 700;
+		min-height: 62px;
+		line-height: 62px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	&--small {
+		font-size: 11px;
+		min-height: 27px;
+		line-height: 27px;
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+
+	&--more {
+		background-color: $contrast;
+		&:hover {
+			background-color: darken($contrast, 10%);
+		}
+	}
+
+}
+.ba-table{
+	display: table;
+	width: 100%;
+	.ba-tr{
+		display: table-row;
+		width: 100%;
+		.ba-td{
+			display: table-cell;
+			height: 100%;
+			vertical-align: middle;
+		}
+	}
+}

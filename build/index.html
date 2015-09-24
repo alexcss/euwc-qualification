@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<title>Challenge</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta charset="UTF-8">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+	<meta name="msapplication-TileColor" content="#202020">
+	<meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="css/style.css" />
+
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<header class="ba-header">
+		<div class="ba-container">
+			<a href="/" class="ba-logo ba-float-left">
+				<svg class="ba-logo__img" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="122" height="32" viewBox="0 0 122 32">
+					<path d="M117.3 26.75C114.19 29.78 110.43 31.3 106.03 31.3 102.13 31.3 98.64 29.95 95.54 27.26 92.13 24.28 90.42 20.37 90.42 15.54 90.42 11.29 91.98 7.65 95.09 4.6 98.19 1.56 101.91 0.03 106.26 0.03 110.56 0.03 114.24 1.57 117.32 4.64 120.4 7.71 121.95 11.41 121.95 15.72 121.95 20.05 120.4 23.73 117.3 26.75ZM114.13 7.59C112 5.4 109.35 4.31 106.2 4.31 103.07 4.31 100.42 5.4 98.25 7.59 96.09 9.75 95.01 12.41 95.01 15.59 95.01 18.92 96.13 21.66 98.37 23.8 100.6 25.95 103.17 27.02 106.09 27.02 109.25 27.02 111.92 25.93 114.09 23.75 116.27 21.53 117.36 18.84 117.36 15.67 117.36 12.45 116.28 9.76 114.13 7.59ZM80.77 26.59C77.97 29.75 74.41 31.32 70.08 31.32 65.86 31.32 62.25 29.8 59.24 26.75 56.23 23.69 54.73 20.02 54.73 15.73 54.73 11.36 56.26 7.65 59.32 4.6 62.38 1.54 66.1 0.01 70.49 0.01 72.85 0.01 75.05 0.49 77.09 1.45 79.05 2.41 80.97 3.97 82.86 6.13 82.86 6.13 79.61 9.23 79.61 9.23 77.14 5.94 74.13 4.29 70.57 4.29 67.38 4.29 64.7 5.39 62.54 7.59 60.38 9.75 59.3 12.46 59.3 15.72 59.3 19.07 60.51 21.84 62.91 24.02 65.17 26.03 67.61 27.04 70.24 27.04 72.48 27.04 74.49 26.29 76.27 24.78 78.06 23.26 79.05 21.45 79.26 19.33 79.26 19.33 71.74 19.33 71.74 19.33 71.74 19.33 71.74 15.05 71.74 15.05 71.74 15.05 84.2 15.05 84.2 15.05 84.2 15.05 84.2 16.05 84.2 16.05 84.2 18.31 83.94 20.32 83.4 22.06 82.88 23.68 82 25.19 80.77 26.59ZM32.59 31.3C28.7 31.3 25.2 29.95 22.11 27.26 18.69 24.28 16.99 20.37 16.99 15.54 16.99 11.29 18.54 7.65 21.66 4.6 24.76 1.56 28.48 0.03 32.83 0.03 37.13 0.03 40.81 1.57 43.88 4.64 46.97 7.71 48.51 11.41 48.51 15.72 48.51 20.05 46.96 23.73 43.86 26.75 40.75 29.78 36.99 31.3 32.59 31.3ZM40.7 7.59C38.56 5.4 35.92 4.31 32.77 4.31 29.63 4.31 26.98 5.4 24.82 7.59 22.66 9.75 21.58 12.41 21.58 15.59 21.58 18.92 22.7 21.66 24.94 23.8 27.16 25.95 29.74 27.02 32.65 27.02 35.82 27.02 38.49 25.93 40.66 23.75 42.84 21.53 43.92 18.84 43.92 15.67 43.92 12.45 42.85 9.76 40.7 7.59ZM-0.01 0.6C-0.01 0.6 4.54 0.6 4.54 0.6 4.54 0.6 4.54 26.48 4.54 26.48 4.54 26.48 13.41 26.48 13.41 26.48 13.41 26.48 13.41 30.75 13.41 30.75 13.41 30.75-0.01 30.75-0.01 30.75 -0.01 30.75-0.01 0.6-0.01 0.6Z" class="ba-logo__regular" fill-rule="evenodd"/>
+					<path d="M117.3 26.75C114.19 29.78 110.43 31.3 106.03 31.3 102.13 31.3 98.64 29.95 95.54 27.26 92.13 24.28 90.42 20.37 90.42 15.54 90.42 11.29 91.98 7.65 95.09 4.6 98.19 1.56 101.91 0.03 106.26 0.03 110.56 0.03 114.24 1.57 117.32 4.64 120.4 7.71 121.95 11.41 121.95 15.72 121.95 20.05 120.4 23.73 117.3 26.75ZM114.13 7.59C112 5.4 109.35 4.31 106.2 4.31 103.07 4.31 100.42 5.4 98.25 7.59 96.09 9.75 95.01 12.41 95.01 15.59 95.01 18.92 96.13 21.66 98.37 23.8 100.6 25.95 103.17 27.02 106.09 27.02 109.25 27.02 111.92 25.93 114.09 23.75 116.27 21.53 117.36 18.84 117.36 15.67 117.36 12.45 116.28 9.76 114.13 7.59Z" class="ba-logo__primary" fill-rule="evenodd"/>
+				</svg>
+			</a>
+
+			<div class="ba-float-right">
+				<nav role="navigation" class="ba-float-left">
+					<ul class="ba-main-menu cf">
+						<li><a href="#">Create</a></li>
+						<li><a href="#">Explore</a></li>
+						<li><a href="#">How it works</a></li>
+						<li><a href="#">News</a></li>
+						<li><a href="#">About us</a></li>
+					</ul>
+					<div class="ba-overlay"></div>
+					<a class="ba-main-menu__toggle ba-hidden-large" href="#">
+						<span></span>
+					</a>
+				</nav>
+				<div class="ba-search ba-float-left">
+					<a class="ba-search__toggle" href="#">
+						<svg class="ba-search__icon" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="13" height="13" viewBox="0 0 13 13"><path d="M5.5 9c-.964 0-1.788-.342-2.473-1.027C2.342 7.288 2 6.463 2 5.5c0-.964.342-1.788 1.027-2.473C3.712 2.343 4.537 2 5.5 2c.964 0 1.788.343 2.473 1.027C8.657 3.712 9 4.537 9 5.5c0 .964-.343 1.788-1.027 2.473C7.288 8.658 6.463 9 5.5 9zm7.21 2.297l-2.68-2.68c.647-.932.97-1.97.97-3.117 0-.745-.145-1.457-.434-2.137-.29-.68-.68-1.265-1.17-1.758-.494-.492-1.08-.882-1.76-1.17C6.957.144 6.247 0 5.5 0c-.745 0-1.457.145-2.137.434-.68.29-1.265.68-1.758 1.17-.492.494-.882 1.08-1.17 1.76C.144 4.043 0 4.753 0 5.5c0 .745.145 1.457.434 2.137.29.68.68 1.265 1.17 1.758.494.492 1.08.882 1.76 1.17.68.29 1.39.435 2.136.435 1.146 0 2.185-.323 3.117-.97l2.68 2.673c.187.198.422.297.703.297.27 0 .505-.1.703-.297.198-.198.297-.432.297-.703 0-.276-.096-.51-.29-.703z" fill-rule="evenodd"/></svg>
+						<svg class="ba-search__close" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="10" height="10" viewBox="0 0 10 10">
+						  <path d="M9.05 6.92C9.05 6.92 6.75 4.63 6.75 4.63 6.75 4.63 9.05 2.33 9.05 2.33 9.19 2.18 9.27 2.01 9.27 1.8 9.27 1.59 9.19 1.41 9.05 1.27 9.05 1.27 7.98 0.2 7.98 0.2 7.84 0.06 7.66-0.02 7.45-0.02 7.25-0.02 7.07 0.06 6.92 0.2 6.92 0.2 4.63 2.5 4.63 2.5 4.63 2.5 2.33 0.2 2.33 0.2 2.18 0.06 2.01-0.02 1.8-0.02 1.59-0.02 1.41 0.06 1.27 0.2 1.27 0.2 0.2 1.27 0.2 1.27 0.06 1.41-0.02 1.59-0.02 1.8 -0.02 2.01 0.06 2.18 0.2 2.33 0.2 2.33 2.5 4.63 2.5 4.63 2.5 4.63 0.2 6.92 0.2 6.92 0.06 7.07-0.02 7.25-0.02 7.45 -0.02 7.66 0.06 7.84 0.2 7.98 0.2 7.98 1.27 9.05 1.27 9.05 1.41 9.19 1.59 9.27 1.8 9.27 2.01 9.27 2.18 9.19 2.33 9.05 2.33 9.05 4.63 6.75 4.63 6.75 4.63 6.75 6.92 9.05 6.92 9.05 7.07 9.19 7.25 9.27 7.45 9.27 7.66 9.27 7.84 9.19 7.98 9.05 7.98 9.05 9.05 7.98 9.05 7.98 9.19 7.84 9.27 7.66 9.27 7.45 9.27 7.25 9.19 7.07 9.05 6.92 9.05 6.92 9.05 6.92 9.05 6.92Z" fill-rule="evenodd"/>
+						</svg>
+					</a>
+					<div class="ba-search__dropdown">
+						<div class="ba-container">
+							<form action="#" method="post" class="ba-search__form ba-container-center ba-width-medium-2-3">
+								<input type="text" class="ba-search__input ba-width-1-1" required name="search">
+								<button class="ba-search__submit" type="submit">
+									<svg class="ba-search__icon" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="13" height="13" viewBox="0 0 13 13"><path d="M5.5 9c-.964 0-1.788-.342-2.473-1.027C2.342 7.288 2 6.463 2 5.5c0-.964.342-1.788 1.027-2.473C3.712 2.343 4.537 2 5.5 2c.964 0 1.788.343 2.473 1.027C8.657 3.712 9 4.537 9 5.5c0 .964-.343 1.788-1.027 2.473C7.288 8.658 6.463 9 5.5 9zm7.21 2.297l-2.68-2.68c.647-.932.97-1.97.97-3.117 0-.745-.145-1.457-.434-2.137-.29-.68-.68-1.265-1.17-1.758-.494-.492-1.08-.882-1.76-1.17C6.957.144 6.247 0 5.5 0c-.745 0-1.457.145-2.137.434-.68.29-1.265.68-1.758 1.17-.492.494-.882 1.08-1.17 1.76C.144 4.043 0 4.753 0 5.5c0 .745.145 1.457.434 2.137.29.68.68 1.265 1.17 1.758.494.492 1.08.882 1.76 1.17.68.29 1.39.435 2.136.435 1.146 0 2.185-.323 3.117-.97l2.68 2.673c.187.198.422.297.703.297.27 0 .505-.1.703-.297.198-.198.297-.432.297-.703 0-.276-.096-.51-.29-.703z" fill-rule="evenodd"/></svg>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<ul class="ba-header__join ba-float-left">
+					<li><a href="#">Sign in</a></li>
+					<li class="ba-relative"><a href="#" class="ba-button">Join us</a><a class="ba-fb-join" href="#" target="_blank"></a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<main role="main">
+		<section class="ba-slider-wrap">
+			<div class="ba-slider">
+				<div class="ba-slide" style="background-image: url(img/slides/slide1.jpg);">
+					<div class="ba-slide__inner">
+						<div class="ba-slide__body">
+							<div class="ba-container">
+								<p class="ba-slide__text"><span>Create & Solve Innovation Challenges Such As:</span></p>
+								<h3 class="ba-slide__title"><span>The Featured Challenge</span></h3>
+								<a href="#" class="ba-button ba-button--light">Learn more</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ba-slide" style="background-image: url(img/slides/slide2.jpg);">
+					<div class="ba-slide__inner">
+						<div class="ba-slide__body">
+							<div class="ba-container">
+								<p class="ba-slide__text"><span>Create & Solve Innovation Challenges Such As:</span></p>
+								<h3 class="ba-slide__title"><span>The Featured Challenge</span></h3>
+								<a href="#" class="ba-button ba-button--light">Learn more</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ba-slider__controls ba-container"></div>
+		</section>
+		<section class="ba-banners">
+			<div class="ba-grid ba-grid-nopad">
+				<div class="ba-width-medium-1-2">
+					<div class="ba-video cf" style="background-image: url(img/video-thumb.jpg">
+						<a class="ba-video__link ba-float-right-medium" href="#" data-eq-h>
+							<div class="ba-video__link__body ba-vertical-align">
+								<div class="ba-vertical-align-middle">
+									<h4 class="ba-video__title">The title of the video</h4>
+									<svg class="ba-video__icon" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve" >
+										<defs>
+											<filter id="dropshadow" height="130%">
+												<feGaussianBlur in="SourceAlpha" stdDeviation="2"></feGaussianBlur>
+												<feOffset dx="0" dy="0" result="offsetblur"></feOffset>
+												<feComponentTransfer xmlns="http://www.w3.org/2000/svg">
+													<feFuncA type="linear" slope="0.5"></feFuncA>
+												</feComponentTransfer>
+												<feMerge>
+													<feMergeNode></feMergeNode>
+													<feMergeNode in="SourceGraphic"></feMergeNode>
+												</feMerge>
+											</filter>
+										</defs>
+									  <circle filter="url(#dropshadow)" fill="#FFFFFF" cx="36" cy="36" r="34"/>
+									  <path d="M31.000,28.000 C31.000,28.000 31.000,47.000 31.000,47.000 C31.000,47.000 46.000,37.000 46.000,37.000 C46.000,37.000 31.000,28.000 31.000,28.000 Z" class="ba-video__icon__play" fill-rule="evenodd"/>
+									</svg>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="ba-width-medium-1-2">
+					<div class="ba-features">
+						<div class="ba-feature ba-feature--create" data-eq-h>
+							<div class="ba-feature__body">
+								<h3 class="ba-feature__title ba-feature__title--create">Create </h3>
+								<p>Where in your company, organization or community are you hitting a wall? We take your problems and re-arrange them into a series of measurable targets that competitors must achieve for your challenge to be met and the prize to be won</p>
+							</div>
+						</div>
+						<div class="ba-feature ba-feature--price" data-eq-h>
+							<div class="ba-feature__body">
+								<h3 class="ba-feature__title ba-feature__title--price">Help fund the price </h3>
+								<p>If your challenge is not sponsored, we provide you with the tools to get it funded. We have experts in online promotion and content production and can help chart your journey to a fully funded challenge</p>
+							</div>
+						</div>
+						<div class="ba-feature ba-feature--cup" data-eq-h>
+							<div class="ba-feature__body">
+								<h3 class="ba-feature__title ba-feature__title--cup">Compete</h3>
+								<p>Innovators from all over the world use HeroX to find challenges in which to compete - to create breakthroughs in technology, health, education, economies and communities, and win prizes up to $1 million</p>
+							</div>
+						</div>
+					</div>
+					<div class="ba-feature__controls"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ba-cta">
+			<div class="ba-container">
+				<div class="ba-grid" data-grid-margin-medium>
+					<div class="ba-width-large-1-3 ba-width-medium-1-2">
+						<h3 class="ba-cta__title ba-cta__title--prizes">
+							in prizes
+						</h3>
+						<div class="ba-cta__count">$4,000,000</div>
+					</div>
+					<div class="ba-width-large-1-3 ba-width-medium-1-2 ba-float-right-medium">
+						<h3 class="ba-cta__title ba-cta__title--users">
+							Crazy Dreamers
+						</h3>
+						<div class="ba-cta__count">+250,000</div>
+
+					</div>
+
+					<div class="ba-width-large-1-3 ba-width-medium-1-1">
+						<div class="ba-cta__impact-counter">
+							<i class="ba-cta__impact-counter__icon"></i>
+							the impact counter
+						</div>
+
+						<a href="#" class="ba-button ba-button--large">Join the community</a>
+
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+
+		<section class="ba-challenges">
+			<div class="ba-container">
+				<h3 class="ba-section-title">Explore the Challenges <a href="#" class="ba-button ba-button--small ba-button--more ba-float-right-medium">See all</a></h3>
+				<div class="ba-grid" data-grid-margin-large>
+					<div class="ba-width-medium-1-2 ba-width-large-1-4">
+						<div class="ba-challenge">
+							<a class="ba-challenge__link" href="#">
+								<img src="img/challanges/sunset.jpg" alt="Sunset">
+							</a>
+							<div class="ba-challenge__body">
+								<h4 class="ba-challenge__title">
+									<a href="#">The Rockefeller Foundation Storytelling Challenge  </a>
+								</h4>
+								<div class="ba-challenge__competitors">competitors 167</div>
+								<p>A challenge to spur Rockefeller Foundation non-profit grantees to share the impact they have had on individuals, communities and the world best </p>
+							</div>
+							<div class="ba-challenge__meta cf">
+								<div class="ba-challenge__status">
+									<div class="ba-challenge__label">Status</div>
+									<span class="ba-challenge__status__val">Fund the Prize</span>
+								</div>
+								<div class="ba-challenge__goal">
+									<div class="ba-challenge__label">goal</div>
+									<span class="ba-challenge__price">5,000</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="ba-width-medium-1-2 ba-width-large-1-4">
+						<div class="ba-challenge">
+							<a class="ba-challenge__link" href="#">
+								<img src="img/challanges/comp-challenge.jpg" alt="Comp Challenge">
+							</a>
+							<div class="ba-challenge__body">
+								<h4 class="ba-challenge__title">
+									<a href="#">The Rockefeller Foundation Storytelling Challenge  </a>
+								</h4>
+								<div class="ba-challenge__competitors">competitors 167</div>
+								<p>A challenge to spur Rockefeller Foundation non-profit grantees to share the impact they have had on individuals, communities and the world best </p>
+							</div>
+							<div class="ba-challenge__meta cf">
+								<div class="ba-challenge__status">
+									<div class="ba-challenge__label">Status</div>
+									<span class="ba-challenge__status__val">Fund the Prize</span>
+								</div>
+								<div class="ba-challenge__goal">
+									<div class="ba-challenge__label">goal</div>
+									<span class="ba-challenge__price">5,000</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="ba-width-medium-1-2 ba-width-large-1-4">
+						<div class="ba-challenge">
+							<a class="ba-challenge__link" href="#">
+								<img src="img/challanges/goldrush.jpg" alt="Gold Rush">
+							</a>
+							<div class="ba-challenge__body">
+								<h4 class="ba-challenge__title">
+									<a href="#">The Rockefeller Foundation Storytelling Challenge  </a>
+								</h4>
+								<div class="ba-challenge__competitors">competitors 167</div>
+								<p>A challenge to spur Rockefeller Foundation non-profit grantees to share the impact they have had on individuals, communities and the world best </p>
+							</div>
+							<div class="ba-challenge__meta cf">
+								<div class="ba-challenge__status">
+									<div class="ba-challenge__label">Status</div>
+									<span class="ba-challenge__status__val">Fund the Prize</span>
+								</div>
+								<div class="ba-challenge__goal">
+									<div class="ba-challenge__label">goal</div>
+									<span class="ba-challenge__price">5,000</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="ba-width-medium-1-2 ba-width-large-1-4">
+						<div class="ba-challenge">
+							<a class="ba-challenge__link" href="#">
+								<img src="img/challanges/planes.jpg" alt="Planes">
+							</a>
+							<div class="ba-challenge__body">
+								<h4 class="ba-challenge__title">
+									<a href="#">The Rockefeller Foundation Storytelling Challenge  </a>
+								</h4>
+								<div class="ba-challenge__competitors">competitors 167</div>
+								<p>A challenge to spur Rockefeller Foundation non-profit grantees to share the impact they have had on individuals, communities and the world best </p>
+							</div>
+							<div class="ba-challenge__meta cf">
+								<div class="ba-challenge__status">
+									<div class="ba-challenge__label">Status</div>
+									<span class="ba-challenge__status__val">Fund the Prize</span>
+								</div>
+								<div class="ba-challenge__goal">
+									<div class="ba-challenge__label">goal</div>
+									<span class="ba-challenge__price">5,000</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="ba-grid" data-grid-margin-large>
+
+					<div class="ba-width-medium-1-2 ba-width-large-1-4">
+						<div class="ba-challenge">
+							<a class="ba-challenge__link" href="#">
+								<img src="img/challanges/free.jpg" alt="Free">
+							</a>
+							<div class="ba-challenge__body">
+								<h4 class="ba-challenge__title">
+									<a href="#">The Rockefeller Foundation Storytelling Challenge  </a>
+								</h4>
+								<div class="ba-challenge__competitors">competitors 167</div>
+								<p>A challenge to spur Rockefeller Foundation non-profit grantees to share the impact they have had on individuals, communities and the world best </p>
+							</div>
+							<div class="ba-challenge__meta cf">
+								<div class="ba-challenge__status">
+									<div class="ba-challenge__label">Status</div>
+									<span class="ba-challenge__status__val">Fund the Prize</span>
+								</div>
+								<div class="ba-challenge__goal">
+									<div class="ba-challenge__label">goal</div>
+									<span class="ba-challenge__price">5,000</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="ba-width-medium-1-2 ba-width-large-1-4">
+						<div class="ba-challenge">
+							<a class="ba-challenge__link" href="#">
+								<img src="img/challanges/house-to-home.jpg" alt="House to Home">
+							</a>
+							<div class="ba-challenge__body">
+								<h4 class="ba-challenge__title">
+									<a href="#">The Rockefeller Foundation Storytelling Challenge  </a>
+								</h4>
+								<div class="ba-challenge__competitors">competitors 167</div>
+								<p>A challenge to spur Rockefeller Foundation non-profit grantees to share the impact they have had on individuals, communities and the world best </p>
+							</div>
+							<div class="ba-challenge__meta cf">
+								<div class="ba-challenge__status">
+									<div class="ba-challenge__label">Status</div>
+									<span class="ba-challenge__status__val">Fund the Prize</span>
+								</div>
+								<div class="ba-challenge__goal">
+									<div class="ba-challenge__label">goal</div>
+									<span class="ba-challenge__price">5,000</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="ba-width-medium-1-2 ba-width-large-1-4">
+						<div class="ba-challenge">
+							<a class="ba-challenge__link" href="#">
+								<img src="img/challanges/self-replicating-robots.jpg" alt="Self replicating robots">
+							</a>
+							<div class="ba-challenge__body">
+								<h4 class="ba-challenge__title">
+									<a href="#">The Rockefeller Foundation Storytelling Challenge  </a>
+								</h4>
+								<div class="ba-challenge__competitors">competitors 167</div>
+								<p>A challenge to spur Rockefeller Foundation non-profit grantees to share the impact they have had on individuals, communities and the world best </p>
+							</div>
+							<div class="ba-challenge__meta cf">
+								<div class="ba-challenge__status">
+									<div class="ba-challenge__label">Status</div>
+									<span class="ba-challenge__status__val">Fund the Prize</span>
+								</div>
+								<div class="ba-challenge__goal">
+									<div class="ba-challenge__label">goal</div>
+									<span class="ba-challenge__price">5,000</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="ba-width-medium-1-2 ba-width-large-1-4">
+						<div class="ba-challenge">
+							<a class="ba-challenge__link" href="#">
+								<img src="img/challanges/raising-the-bar.jpg" alt="Raising the bar">
+							</a>
+							<div class="ba-challenge__body">
+								<h4 class="ba-challenge__title">
+									<a href="#">The Rockefeller Foundation Storytelling Challenge  </a>
+								</h4>
+								<div class="ba-challenge__competitors">competitors 167</div>
+								<p>A challenge to spur Rockefeller Foundation non-profit grantees to share the impact they have had on individuals, communities and the world best </p>
+							</div>
+							<div class="ba-challenge__meta cf">
+								<div class="ba-challenge__status">
+									<div class="ba-challenge__label">Status</div>
+									<span class="ba-challenge__status__val">Fund the Prize</span>
+								</div>
+								<div class="ba-challenge__goal">
+									<div class="ba-challenge__label">goal</div>
+									<span class="ba-challenge__price">5,000</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</section>
+
+		<section class="ba-news">
+			<div class="ba-container">
+				<h3 class="ba-section-title">Recent News <a href="#" class="ba-button ba-button--small ba-button--more ba-float-right-medium">See all</a></h3>
+				<div class="ba-grid" data-grid-margin-medium>
+					<div class="ba-width-medium-1-3">
+						<div class="ba-post">
+							<a href="#" class="ba-post__link">
+								<img src="img/news/globe.jpg" alt="">
+							</a>
+							<div class="ba-post__body">
+								<h3 class="ba-post__title"><a href="#">Immigrants More Likely to Be Entrepreneurs</a></h3>
+								<div class="ba-post__meta">Posted by <a href="#">Jesus Salas</a> on Jan. 29, 2015</div>
+							</div>
+						</div>
+					</div>
+					<div class="ba-width-medium-1-3">
+						<div class="ba-post">
+							<a href="#" class="ba-post__link">
+								<img src="img/news/stroke.jpg" alt="">
+							</a>
+							<div class="ba-post__body">
+								<h3 class="ba-post__title"><a href="#">Transforming Personal Health: The Nokia Sensing XChallenge</a></h3>
+								<div class="ba-post__meta">Posted by <a href="#">Jesus Salas</a> on Jan. 29, 2015</div>
+							</div>
+						</div>
+					</div>
+					<div class="ba-width-medium-1-3">
+						<div class="ba-post">
+							<a href="#" class="ba-post__link">
+								<img src="img/news/clinic.jpg" alt="">
+							</a>
+							<div class="ba-post__body">
+								<h3 class="ba-post__title"><a href="#">Getting More From Results: The Clinical Trial Innovation Prize</a></h3>
+								<div class="ba-post__meta">Posted by <a href="#">Jesus Salas</a> on Jan. 29, 2015</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ba-sign-up">
+			<div class="ba-container">
+				<h3 class="ba-section-title ba-section-title--light ba-sign-up__title ba-text-center">Become a part of the future!</h3>
+				<form action="#" method="post" name="sign_up" class="ba-sign-up__form ba-container-center ba-width-medium-2-3 ba-width-large-2-5">
+					<input type="email" name="email" required placeholder="Sign up for the recent news, type in your e-mail" class="ba-width-1-1 ba-sign-up__input">
+					<button class="ba-sign-up__button" type="submit">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="24" height="25" viewBox="0 0 24 25">
+						  <path d="M23.633,0.163 C23.499,0.069 23.325,0.016 23.150,0.016 C23.003,0.016 22.856,0.056 22.722,0.136 C22.722,0.136 0.429,12.998 0.429,12.998 C0.147,13.158 -0.013,13.466 0.000,13.788 C0.027,14.123 0.228,14.404 0.536,14.525 C0.536,14.525 5.828,16.695 5.828,16.695 C5.828,16.695 20.149,4.303 20.149,4.303 C20.149,4.303 8.574,18.490 8.574,18.490 C8.574,18.490 8.574,23.166 8.574,23.166 C8.574,23.528 8.802,23.849 9.137,23.970 C9.231,24.010 9.338,24.023 9.432,24.023 C9.686,24.023 9.927,23.916 10.088,23.715 C10.088,23.715 13.330,19.763 13.330,19.763 C13.330,19.763 19.399,22.242 19.399,22.242 C19.506,22.282 19.614,22.309 19.721,22.309 C19.868,22.309 20.015,22.268 20.136,22.201 C20.364,22.068 20.525,21.853 20.565,21.599 C20.565,21.599 23.994,1.020 23.994,1.020 C24.048,0.686 23.914,0.364 23.633,0.163 Z" fill="#ffffff"  fill-rule="evenodd"/>
+						</svg>
+					</button>
+				</form>
+
+			</div>
+		</section>
+	</main>
+
+	<footer class="ba-footer ba-text-center-small" role="contentinfo">
+		<div class="ba-footer__inner">
+			<div class="ba-container">
+				<div class="ba-grid" data-grid-margin-medium>
+					<div class="ba-width-medium-1-4">
+						<h4 class="ba-footer__title">About</h4>
+						<ul class="ba-footer__links">
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">Terms of Use</a></li>
+							<li><a href="#">News</a></li>
+							<li><a href="#">Events</a></li>
+						</ul>
+					</div>
+					<div class="ba-width-medium-1-4">
+						<h4 class="ba-footer__title">Get Involved</h4>
+						<ul  class="ba-footer__links">
+							<li><a href="#">Work with Us</a></li>
+							<li><a href="#">Subscribe for Newsletter</a></li>
+							<li><a href="#">Forum</a></li>
+						</ul>
+					</div>
+					<div class="ba-width-medium-1-4">
+						<h4 class="ba-footer__title">Help Center</h4>
+						<ul class="ba-footer__links">
+							<li><a href="#">FAQs</a></li>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">How to Start a Challenge</a></li>
+						</ul>
+					</div>
+					<div class="ba-width-medium-1-4">
+						<h4 class="ba-footer__title ba-footer__title--social">Connect with Us</h4>
+						<ul class="ba-footer__socials cf">
+							<li><a class="ba-icon ba-icon--fb" href="#"></a></li>
+							<li><a class="ba-icon ba-icon--tw" href="#"></a></li>
+							<li><a class="ba-icon ba-icon--gp" href="#"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ba-footer__copy">
+			<div class="ba-container">
+				<p class="ba-float-right-medium">&copy; 2015  All Rights Reserved</p>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
